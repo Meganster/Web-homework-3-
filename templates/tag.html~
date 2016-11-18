@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<p class="tag-for-search">{{ item.tagOne }}</p>
+
+{% for item in objects %}
+          <div class="row question-answer">
+            <div class="col-xs-8 col-sm-2 col-picture">
+              <img src="/img/avatar2.jpg" alt="question1"  height="50" width="50" class="img-rounded">
+            </div>
+            <div class="col-xs-4 col-sm-10 col-question">
+              <dl>
+                <dt class="headlines-answer-question">
+                  <a href="/question/{{ item.id }}/">{{ item.title }}</a>
+                </dt>
+                <dd>
+                 {{ item.text }}
+                </dd>
+              </dl>
+
+              <div class="row tags-like-dislike">
+                    <div class="col-xs-8 col-sm-6">
+                      <div class="main-answers-and-tags">
+                            <a href="/question/{{ item.id }}/">Answers ...</a>
+                            <span class="tags">Tags:</span>
+                            <a href="/tag/{{ item.tagOne }}/">{{ item.tagOne }}</a> 
+                            <a href="/tag/{{ item.tagTwo }}/">{{ item.tagTwo }}</a>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-8 col-sm-6 like-dislike">
+                      <div class="questions-list-btn-group btn-group">
+                        <button class="btn btn-link btn-sm"><img src="/img/dislike.png" alt="Dislike icons" height="18" width="18" class="img-rounded"></button>
+                       <button class="btn btn-link btn-sm green-mark count-like" disabled="disabled">+100</button>
+                        <button class="btn btn-link btn-sm"><img src="/img/like.png" alt="Dislike icons" height="18" width="18" class="img-rounded"></button>
+                      </div>
+                    </div>
+              </div><!--/.tags and like/dislike -->
+            </div>
+          </div> <!--/.question1 -->
+
+{% endfor %}
+
+{% endblock %}
+
+
+{% block right-column %}
+						<div class="block">
+                        <p class="headlines-right-col">Popular Tags</p>
+                        <p>
+                          <a class="Special-format1">Python</a>
+                          <a class="Special-format2">Perl</a>
+                        </p>
+                        <p>
+                          <a class="Special-format1">Firefox</a>
+                          <a class="Special-format3" href="/tag/mvc">MVC</a>
+                          <a class="Special-format2">Chrome</a>
+                        </p>
+                        <p>
+                          <a class="Special-format2">Postgre SQL</a>
+                          <a class="Special-format3">StackOverflow</a>
+                        </p>
+                  </div> 
+
+                  <div class="best-members">
+                        <div class="block">
+                            <p class="headlines-right-col">Best members</p>
+                              <ul class="active-users">
+                                <li><a href="#mrfreeman">Mr.Freeman</a></li>
+                                <li><a href="#gorub">Gorub</a></li>
+                                <li><a href="#maks">Maks</a></li>
+                                <li><a href="#fikus">Fikus</a></li>
+                                <li><a href="#alex">Alex</a></li>
+                                <li><a href="#rr">RR</a></li>
+                                <li><a href="#apolon">Apolon</a></li>
+                              </ul>
+                        </div> 
+                  </div>
+
+{% endblock %}
+
+
+
+
