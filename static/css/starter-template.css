@@ -1,5 +1,20 @@
-.style-navbar{
+.style-navbar {
 	margin-bottom: 3px;
+}
+
+nav.navbar.navbar-inverse.navbar-fixed-top{
+	border-top-width: 4px;
+	border-top-color: darkorange;
+	border-bottom-color: darkgray
+}
+nav .navbar-inner{
+	background-color: white;
+}
+
+
+#first-word-title {
+	font-weight: normal;
+	color: darkgray
 }
 
 body {
@@ -10,12 +25,12 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
 .placeholder {
 	padding: 0px, 50px;
-	margin: 12px;
-	width: 300px;
+	margin: 14px;
+	width: 200px;
 	text-align: left;
-	border-radius: 10px;
 }
 
 .logo{
@@ -25,14 +40,19 @@ body {
 }
 
 .active-users{
-	list-style-type: none; 
+	list-style-type: none;
+	color: black; 
 	text-align: left;
-	 margin: 10px -35px;
+	margin: 10px -35px;
+}
+
+.active-users a{
+	color: black;
 }
 
 .tags-like-dislike{
-margin-top: 20px;
-margin-bottom: 0px;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 .like-dislike{
@@ -45,4 +65,31 @@ margin-bottom: 0px;
 
 .right-block{
 	margin-left: 10%;
+}
+
+.login-register-header{
+	margin-top: 8px;
+}
+
+.btn-login-header{
+	background-color: white;
+	border-color: cornflowerblue;
+	text-decoration: none;
+}
+
+.btn-login-header a{
+	color: cornflowerblue;
+}
+
+.btn-register-header{
+	background-color: cornflowerblue;
+	text-decoration: none;
+}
+
+.btn-register-header a{
+	color: white;
+}
+
+.blue-text-color{
+    color: cornflowerblue;
 }

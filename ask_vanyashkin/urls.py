@@ -17,15 +17,14 @@ from django.conf.urls import url
 from django.contrib import admin
 from ask_app import views
 
-
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^hello/', views.hello),
-    url(r'^login/', views.login),
-    url(r'^signup/', views.signup),
-    url(r'^ask/', views.ask),
-    url(r'^question/', views.question),
-    url(r'^', views.index),
-    url(r'^tag/', views.tag),
-    url(r'^first/', views.first)
+               url(r'^admin/', admin.site.urls, name='admin'),
+               url(r'^login/', views.login, name='login'),
+               url(r'^reg/', views.registration, name='reg'),
+               url(r'^tag/', views.tag, name='tag'),
+               url(r'^ask/', views.ask, name='ask'),
+               url(r'^question/', views.question, name='question'),
+               url(r'^settings/', views.settings, name='settings'),
+               url(r'^indexlog/', views.indexlog, name='indexlog'),
+               url(r'^', views.index, name='index'),
 ]
